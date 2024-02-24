@@ -114,6 +114,10 @@ const ShortVideo = ({ url }) => {
           preload="auto"
         ></video>
 
+        <div className="gradient-top"></div>
+
+        <div className="gradient-bottom"></div>
+
         <div className="progress-bar">
           <div className="progress" style={{ width: `${progress}%` }}></div>
         </div>
