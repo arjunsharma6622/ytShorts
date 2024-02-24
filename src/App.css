@@ -38,12 +38,6 @@ body {
   border-radius: 30px;
 }
 
-@media screen and (max-width: 600px) {
-  .vid {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 400px) {
   .vid {
     width: 300px;
