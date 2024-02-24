@@ -111,6 +111,7 @@ const ShortVideo = ({ url }) => {
           ref={vidRef}
           loop={true}
           onClick={handlePlayPause}
+          preload="auto"
         ></video>
 
         <div className="progress-bar">
