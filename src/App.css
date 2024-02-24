@@ -11,8 +11,14 @@ body {
   justify-content: center;
   background-color: black;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 14px
+}
 
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 12px
+  }
+  
 }
 
 .short-videos-wrapper {
@@ -30,6 +36,19 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .vid {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .vid {
+    width: 300px;
+  }
+
 }
 
 .short-video-wrapper {
@@ -52,16 +71,40 @@ body {
   position: relative;
 }
 
-.controls{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media screen and (max-width: 400px) {
+  .short-video {
+    width: 100%;
+  }
+
+  
+}
+
+.controls-1{
   position: absolute;
   top: 20px;
-  width: 80%;
-  margin: auto 40px;
   color: white;
   font-size: 1.5rem;
+  left: 20px;
+}
+
+.controls-2{
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-size: 1.5rem;
+  right: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .controls-1, .controls-2 {
+    font-size: 1.2rem;
+  }
+  
+}
+
+
+.controls > * {
+  cursor: pointer;
 }
 
 
@@ -145,7 +188,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
+
+@media screen and (max-width: 400px) {
+  .link-icon-outer {
+    width: 15px;
+    height: 15px;
+  };
+  .link-icon{
+    font-size: 0.8rem;
+  }
+};
 
 @keyframes spin {
   from {

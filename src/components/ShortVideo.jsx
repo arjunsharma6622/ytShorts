@@ -127,14 +127,14 @@ const ShortVideo = ({ url }) => {
         </div>
 
         <div className="controls">
-          <div>
+          <div className="controls-1">
             {!isPlaying ? (
               <FiPlay className="" onClick={handlePlayPause} />
             ) : (
               <FiPause className="" onClick={handlePlayPause} />
             )}
           </div>
-          <div>
+          <div className="controls-2">
             {!muted ? (
               <BiSolidVolumeFull onClick={handleMute} />
             ) : (
