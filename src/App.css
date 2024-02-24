@@ -41,6 +41,11 @@ body {
   overflow-y: auto;
   height: 100vh;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .short-videos-wrapper::-webkit-scrollbar {
@@ -71,8 +76,8 @@ body {
 }
 
 .short-video {
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 100vh;
   margin-top: auto;
   margin-bottom: auto;
   object-fit: cover;
@@ -86,7 +91,7 @@ body {
 @media screen and (max-width: 400px) {
   .short-video {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 
   
@@ -151,7 +156,7 @@ body {
   background-color: rgb(49, 49, 49);
   border-radius: 0px;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
 
 }
 

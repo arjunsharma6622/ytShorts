@@ -19,8 +19,8 @@ const ShortVideo = ({ url }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [playPause, setPlayPause] = useState(null);
-  const [liked, setLiked] = useState(false);
-  const [muted, setMuted] = useState(false);
+  const [liked, setLiked] = useState(null);
+  const [muted, setMuted] = useState(true);
 
   const handlePlayPause = () => {
     console.log("enterred here");
@@ -112,6 +112,7 @@ const ShortVideo = ({ url }) => {
           loop={true}
           onClick={handlePlayPause}
           preload="auto"
+          muted={true}
         ></video>
 
         <div className="gradient-top"></div>
