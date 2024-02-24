@@ -19,7 +19,8 @@ const ShortVideo = ({ url }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [playPause, setPlayPause] = useState(null);
-  const [liked, setLiked] = useState(null);
+  const [liked, setLiked] = useState(false);
+  const [disliked, setDisliked] = useState(false);
   const [muted, setMuted] = useState(true);
 
   const handlePlayPause = () => {
@@ -152,7 +153,10 @@ const ShortVideo = ({ url }) => {
           <div className="link-wrapper">
             <div
               className="link-icon-outer"
-              onClick={() => setLiked(!liked)}
+              onClick={() => {
+                setLiked(!liked);
+                setDisliked(false);
+              }}
               style={{ backgroundColor: liked ? "white" : "" }}
             >
               <BiSolidLike
@@ -166,12 +170,15 @@ const ShortVideo = ({ url }) => {
           <div className="link-wrapper">
             <div
               className="link-icon-outer"
-              onClick={() => setLiked(false)}
-              style={{ backgroundColor: liked ? "" : "white" }}
+              onClick={() => {
+                setDisliked(!disliked);
+                setLiked(false);
+              }}
+              style={{ backgroundColor: !disliked ? "" : "white" }}
             >
               <BiSolidDislike
                 className="link-icon"
-                style={{ color: liked ? "white" : "black" }}
+                style={{ color: !disliked ? "white" : "black" }}
               />
             </div>
             <span>Dislike</span>
